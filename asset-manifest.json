@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.4db40acc.css",
-    "main.js": "/static/js/main.a35b569b.js",
+    "main.css": "/static/css/main.0f29445d.css",
+    "main.js": "/static/js/main.8a10f657.js",
     "static/js/453.f2dee870.chunk.js": "/static/js/453.f2dee870.chunk.js",
     "static/media/fabric.png": "/static/media/fabric.783578cd9ef3fd8a75e2.png",
     "static/media/salesforceaiass.png": "/static/media/salesforceaiass.77f955b4dd62959ff87d.png",
@@ -28,7 +28,6 @@
     "static/media/skypeforbusiness.png": "/static/media/skypeforbusiness.ef3a8777998faf8acd9f.png",
     "static/media/coreskype.png": "/static/media/coreskype.003dec077c4593b2fb1d.png",
     "static/media/manageing0365.png": "/static/media/manageing0365.fe43a434a8ac8fe85ae2.png",
-    "static/media/enablingo365.png": "/static/media/enablingo365.94a032ecdc2a767f98e4.png",
     "static/media/accenture.png": "/static/media/accenture.be56100c4c1edcc8e0be.png",
     "static/media/ccnp.png": "/static/media/ccnp.52fdb0c9733cf9931205.png",
     "static/media/ccna.png": "/static/media/ccna.5f8ec742c6ebc08bbab3.png",
@@ -37,12 +36,12 @@
     "static/media/twilio.svg": "/static/media/twilio.a46d6095007a37364af114907b076c49.svg",
     "index.html": "/index.html",
     "static/media/microsoft.svg": "/static/media/microsoft.72f0fcc793eda19cdc1604efc3b381cb.svg",
-    "main.4db40acc.css.map": "/static/css/main.4db40acc.css.map",
-    "main.a35b569b.js.map": "/static/js/main.a35b569b.js.map",
+    "main.0f29445d.css.map": "/static/css/main.0f29445d.css.map",
+    "main.8a10f657.js.map": "/static/js/main.8a10f657.js.map",
     "453.f2dee870.chunk.js.map": "/static/js/453.f2dee870.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4db40acc.css",
-    "static/js/main.a35b569b.js"
+    "static/css/main.0f29445d.css",
+    "static/js/main.8a10f657.js"
   ]
 }
