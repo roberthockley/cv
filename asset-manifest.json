@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.0f29445d.css",
-    "main.js": "/static/js/main.7046dfc2.js",
+    "main.js": "/static/js/main.9ac7cd08.js",
     "static/js/453.e25f5e97.chunk.js": "/static/js/453.e25f5e97.chunk.js",
     "static/media/fabric.png": "/static/media/fabric.783578cd9ef3fd8a75e2.png",
     "static/media/salesforceaiass.png": "/static/media/salesforceaiass.77f955b4dd62959ff87d.png",
@@ -46,11 +46,11 @@
     "index.html": "/index.html",
     "static/media/microsoft.svg": "/static/media/microsoft.72f0fcc793eda19cdc1604efc3b381cb.svg",
     "main.0f29445d.css.map": "/static/css/main.0f29445d.css.map",
-    "main.7046dfc2.js.map": "/static/js/main.7046dfc2.js.map",
+    "main.9ac7cd08.js.map": "/static/js/main.9ac7cd08.js.map",
     "453.e25f5e97.chunk.js.map": "/static/js/453.e25f5e97.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0f29445d.css",
-    "static/js/main.7046dfc2.js"
+    "static/js/main.9ac7cd08.js"
   ]
 }
