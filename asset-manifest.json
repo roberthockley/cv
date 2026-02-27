@@ -1,14 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.0f29445d.css",
-    "main.js": "/static/js/main.18015eea.js",
-    "static/js/453.f2dee870.chunk.js": "/static/js/453.f2dee870.chunk.js",
+    "main.js": "/static/js/main.7046dfc2.js",
+    "static/js/453.e25f5e97.chunk.js": "/static/js/453.e25f5e97.chunk.js",
     "static/media/fabric.png": "/static/media/fabric.783578cd9ef3fd8a75e2.png",
     "static/media/salesforceaiass.png": "/static/media/salesforceaiass.77f955b4dd62959ff87d.png",
     "static/media/aws.png": "/static/media/aws.f20227e5e2c079219c5d.png",
     "static/media/solutions-architect-associate.png": "/static/media/solutions-architect-associate.5de5ac5041c48c198d8b.png",
+    "static/media/standardchartered.png": "/static/media/standardchartered.ecb86fcde31fd02ff873.png",
     "static/media/advanced-ml-engineer.png": "/static/media/advanced-ml-engineer.6d78f87d8edb0ab8edcc.png",
     "static/media/developer-associate.png": "/static/media/developer-associate.6b2fe0732acede573757.png",
+    "static/media/iras.png": "/static/media/iras.827948d69cbbdc868820.png",
     "static/media/terraform.png": "/static/media/terraform.591fe1c2d5081c273e82.png",
     "static/media/advanced-networking-specialty.png": "/static/media/advanced-networking-specialty.9c067f4e1f70d7b5fbab.png",
     "static/media/alexa-skill-builder-specialty.png": "/static/media/alexa-skill-builder-specialty.f1e14e890121848cf038.png",
@@ -18,6 +20,7 @@
     "static/media/security-specialty.png": "/static/media/security-specialty.24044d81d49dcbc6a5c6.png",
     "static/media/ai-practitioner.png": "/static/media/ai-practitioner.5885bdb1bb1ae4f6867d.png",
     "static/media/sfagentforce.png": "/static/media/sfagentforce.0f9b071a470fc78021d1.png",
+    "static/media/origin.png": "/static/media/origin.e9d20ab9fd5f2cadf23e.png",
     "static/media/mcsao365.png": "/static/media/mcsao365.c2385ad6b1dc653e5939.png",
     "static/media/mcseproductivity.png": "/static/media/mcseproductivity.89193d5f16456e6c4bb4.png",
     "static/media/azure-ai-engineer-associate.png": "/static/media/azure-ai-engineer-associate.e50e2e94f88fc2d64a13.png",
@@ -26,23 +29,28 @@
     "static/media/connectaifun.png": "/static/media/connectaifun.468445af5b962aaae9a8.png",
     "static/media/connectdev.png": "/static/media/connectdev.d2894b6b35e67c6ca8a6.png",
     "static/media/connectfun.png": "/static/media/connectfun.c497ed9ff60d4261bd49.png",
+    "static/media/oppo.png": "/static/media/oppo.1ab530fdc592f73efee4.png",
     "static/media/skypeforbusiness.png": "/static/media/skypeforbusiness.ef3a8777998faf8acd9f.png",
     "static/media/coreskype.png": "/static/media/coreskype.003dec077c4593b2fb1d.png",
+    "static/media/dominos.png": "/static/media/dominos.98546d96cf2ff5fe7987.png",
     "static/media/manageing0365.png": "/static/media/manageing0365.fe43a434a8ac8fe85ae2.png",
+    "static/media/sky.png": "/static/media/sky.24766a2515d2f313a37f.png",
     "static/media/accenture.png": "/static/media/accenture.be56100c4c1edcc8e0be.png",
+    "static/media/dhlexpress.png": "/static/media/dhlexpress.262afac0adf32184aec1.png",
     "static/media/ccnp.png": "/static/media/ccnp.52fdb0c9733cf9931205.png",
     "static/media/ccna.png": "/static/media/ccna.5f8ec742c6ebc08bbab3.png",
     "static/media/ccvp.png": "/static/media/ccvp.12f4e56b58bbbf98b39d.png",
     "static/media/connect.webp": "/static/media/connect.670a2621039b7951157f.webp",
     "static/media/twilio.svg": "/static/media/twilio.a46d6095007a37364af114907b076c49.svg",
+    "static/media/commonwealthbank.svg": "/static/media/commonwealthbank.0f90928c251469ce36be3a58a687b3ab.svg",
     "index.html": "/index.html",
     "static/media/microsoft.svg": "/static/media/microsoft.72f0fcc793eda19cdc1604efc3b381cb.svg",
     "main.0f29445d.css.map": "/static/css/main.0f29445d.css.map",
-    "main.18015eea.js.map": "/static/js/main.18015eea.js.map",
-    "453.f2dee870.chunk.js.map": "/static/js/453.f2dee870.chunk.js.map"
+    "main.7046dfc2.js.map": "/static/js/main.7046dfc2.js.map",
+    "453.e25f5e97.chunk.js.map": "/static/js/453.e25f5e97.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0f29445d.css",
-    "static/js/main.18015eea.js"
+    "static/js/main.7046dfc2.js"
   ]
 }
