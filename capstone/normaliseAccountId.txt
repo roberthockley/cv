@@ -1,0 +1,250 @@
+const raw = String(input.text || "").toLowerCase().trim();
+api.log("debug", "Raw: " + raw);
+
+const digitWords = {
+  zero: "0",
+  oh: "0",
+  one: "1",
+  two: "2",
+  three: "3",
+  four: "4",
+  five: "5",
+  six: "6",
+  seven: "7",
+  eight: "8",
+  nine: "9"
+};
+
+const tensWords = {
+  ten: 10,
+  eleven: 11,
+  twelve: 12,
+  thirteen: 13,
+  fourteen: 14,
+  fifteen: 15,
+  sixteen: 16,
+  seventeen: 17,
+  eighteen: 18,
+  nineteen: 19,
+  twenty: 20,
+  thirty: 30,
+  forty: 40,
+  fifty: 50,
+  sixty: 60,
+  seventy: 70,
+  eighty: 80,
+  ninety: 90
+};
+
+const multipliers = {
+  double: 2,
+  triple: 3,
+  quadruple: 4
+};
+
+// Normalize punctuation and spoken separators to spaces
+const cleaned = raw
+  .replace(/[-–—]/g, " ")
+  .replace(/\b(dash|hyphen)\b/g, " ")
+  .replace(/\band\b/g, " ")
+  .replace(/[^\w\s]/g, " ")
+  .replace(/\s+/g, " ")
+  .trim();
+
+const parts = cleaned.split(" ").filter(Boolean);
+
+let letters = "";
+let digits = "";
+let started = false;
+
+function isSingleLetter(x) {
+  return /^[a-z]$/.test(x);
+}
+
+function isWord(x) {
+  return /^[a-z]+$/.test(x);
+}
+
+function looksLikeNumberPhrase(tokens, index) {
+  const current = tokens[index];
+  const next = tokens[index + 1];
+
+  if (!current) return false;
+
+  // e.g. "two thousand", "one hundred"
+  if (
+    (digitWords[current] !== undefined || tensWords[current] !== undefined) &&
+    (next === "hundred" || next === "thousand")
+  ) {
+    return true;
+  }
+
+  // e.g. "twenty one"
+  if (
+    tensWords[current] !== undefined &&
+    digitWords[next] !== undefined &&
+    next !== "zero" &&
+    next !== "oh"
+  ) {
+    return true;
+  }
+
+  return false;
+}
+
+// Parses:
+// "two thousand one" -> "2001"
+// "twenty one" -> "21"
+// "one hundred five" -> "105"
+function parseNumberPhrase(tokens, startIndex) {
+  let total = 0;
+  let current = 0;
+  let consumed = 0;
+  let sawNumber = false;
+
+  for (let i = startIndex; i < tokens.length; i++) {
+    const word = tokens[i];
+
+    if (tensWords[word] !== undefined) {
+      current += tensWords[word];
+      consumed++;
+      sawNumber = true;
+      continue;
+    }
+
+    if (digitWords[word] !== undefined && word !== "zero" && word !== "oh") {
+      current += Number(digitWords[word]);
+      consumed++;
+      sawNumber = true;
+      continue;
+    }
+
+    if (word === "hundred") {
+      if (current === 0) current = 1;
+      current *= 100;
+      consumed++;
+      sawNumber = true;
+      continue;
+    }
+
+    if (word === "thousand") {
+      if (current === 0) current = 1;
+      total += current * 1000;
+      current = 0;
+      consumed++;
+      sawNumber = true;
+      continue;
+    }
+
+    break;
+  }
+
+  if (!sawNumber) {
+    return null;
+  }
+
+  total += current;
+
+  return {
+    value: String(total),
+    consumed
+  };
+}
+
+for (let i = 0; i < parts.length; i++) {
+  const part = parts[i];
+
+  // ---- ARMING LOGIC (find CUST) ----
+  if (!started) {
+    // Case 1: "cust"
+    if (part === "cust") {
+      started = true;
+      letters = "cust";
+      continue;
+    }
+
+    // Case 2: "c u s t"
+    if (
+      part === "c" &&
+      parts[i + 1] === "u" &&
+      parts[i + 2] === "s" &&
+      parts[i + 3] === "t"
+    ) {
+      started = true;
+      letters = "cust";
+      i += 3;
+      continue;
+    }
+
+    continue;
+  }
+
+  // numeric chunk like "2001"
+  if (/^\d+$/.test(part)) {
+    digits += part;
+    continue;
+  }
+
+  // multiplier like "double five", "triple 2"
+  if (multipliers[part] !== undefined) {
+    const next = parts[i + 1];
+
+    if (next !== undefined) {
+      if (/^\d$/.test(next)) {
+        digits += next.repeat(multipliers[part]);
+        i += 1;
+        continue;
+      }
+
+      if (digitWords[next] !== undefined) {
+        digits += digitWords[next].repeat(multipliers[part]);
+        i += 1;
+        continue;
+      }
+    }
+  }
+
+  // real number phrase like "two thousand one", "twenty one"
+  if (looksLikeNumberPhrase(parts, i)) {
+    const phrase = parseNumberPhrase(parts, i);
+    if (phrase) {
+      digits += phrase.value;
+      i += phrase.consumed - 1;
+      continue;
+    }
+  }
+
+  // digit-by-digit words like "two zero zero one"
+  if (digitWords[part] !== undefined) {
+    digits += digitWords[part];
+    continue;
+  }
+
+  // letters after CUST, allow "u s" or "us"
+  if (isSingleLetter(part) || isWord(part)) {
+    letters += part;
+    continue;
+  }
+}
+
+letters = letters.toUpperCase();
+
+context.security = context.security || {};
+
+// Strict validation: exactly CUST + 2 letters, exactly 4 digits
+if (/^CUST[A-Z]{2}$/.test(letters) && /^\d{4}$/.test(digits)) {
+  const country = letters.substring(4, 6);
+
+  context.security.accountCandidate = `CUST-${country}-${digits}`;
+  context.security.accountDetected = true;
+  context.security.accountNormalized = true;
+} else {
+  context.security.accountCandidate = null;
+  context.security.accountDetected = false;
+  context.security.accountNormalized = false;
+}
+
+api.log(
+  "debug",
+  `Normalized letters=${letters}, digits=${digits}, candidate=${context.security.accountCandidate}`
+);
