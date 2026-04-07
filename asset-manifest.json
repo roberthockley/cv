@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.a9d7664e.css",
-    "main.js": "/static/js/main.c258f36a.js",
-    "static/js/453.e25f5e97.chunk.js": "/static/js/453.e25f5e97.chunk.js",
+    "main.css": "/static/css/main.57ab1c86.css",
+    "main.js": "/static/js/main.e4d65b20.js",
+    "static/js/453.f2dee870.chunk.js": "/static/js/453.f2dee870.chunk.js",
     "static/media/fabric.png": "/static/media/fabric.783578cd9ef3fd8a75e2.png",
     "static/media/salesforceaiass.png": "/static/media/salesforceaiass.77f955b4dd62959ff87d.png",
     "static/media/aws.png": "/static/media/aws.f20227e5e2c079219c5d.png",
@@ -45,12 +45,12 @@
     "static/media/commonwealthbank.svg": "/static/media/commonwealthbank.0f90928c251469ce36be3a58a687b3ab.svg",
     "index.html": "/index.html",
     "static/media/microsoft.svg": "/static/media/microsoft.72f0fcc793eda19cdc1604efc3b381cb.svg",
-    "main.a9d7664e.css.map": "/static/css/main.a9d7664e.css.map",
-    "main.c258f36a.js.map": "/static/js/main.c258f36a.js.map",
-    "453.e25f5e97.chunk.js.map": "/static/js/453.e25f5e97.chunk.js.map"
+    "main.57ab1c86.css.map": "/static/css/main.57ab1c86.css.map",
+    "main.e4d65b20.js.map": "/static/js/main.e4d65b20.js.map",
+    "453.f2dee870.chunk.js.map": "/static/js/453.f2dee870.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a9d7664e.css",
-    "static/js/main.c258f36a.js"
+    "static/css/main.57ab1c86.css",
+    "static/js/main.e4d65b20.js"
   ]
 }
