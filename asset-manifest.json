@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.57ab1c86.css",
-    "main.js": "/static/js/main.f021b239.js",
+    "main.js": "/static/js/main.376e5714.js",
     "static/js/453.e25f5e97.chunk.js": "/static/js/453.e25f5e97.chunk.js",
     "static/media/fabric.png": "/static/media/fabric.783578cd9ef3fd8a75e2.png",
     "static/media/cognigy.png": "/static/media/cognigy.0468ade9fad5fbd2bbfe.png",
@@ -48,11 +48,11 @@
     "index.html": "/index.html",
     "static/media/microsoft.svg": "/static/media/microsoft.72f0fcc793eda19cdc1604efc3b381cb.svg",
     "main.57ab1c86.css.map": "/static/css/main.57ab1c86.css.map",
-    "main.f021b239.js.map": "/static/js/main.f021b239.js.map",
+    "main.376e5714.js.map": "/static/js/main.376e5714.js.map",
     "453.e25f5e97.chunk.js.map": "/static/js/453.e25f5e97.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.57ab1c86.css",
-    "static/js/main.f021b239.js"
+    "static/js/main.376e5714.js"
   ]
 }
